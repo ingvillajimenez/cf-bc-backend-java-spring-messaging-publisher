@@ -3,7 +3,7 @@
 FROM gradle:jdk21-alpine AS build
 
 # Copy local code to the container image.
-COPY --chown=gradle:gradle .github/workflows /home/gradle/src
+COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 
 # Build a release artifact.
